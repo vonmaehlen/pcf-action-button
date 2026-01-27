@@ -29,7 +29,20 @@ export class QuickActionButton implements ComponentFramework.StandardControl<IIn
 		const params = context.parameters;
 		const userSettings = context.userSettings.languageId;
 
-		const buttons = JSON.parse(params.Buttons.raw ?? "");
+		// Buttons JSON comes from a bound attribute.
+		// Empty or invalid values are handled defensively.
+		let rawButtons = params.Buttons.raw ?? "";
+		if (!rawButtons.trim()) {
+			rawButtons = "[]";
+		}
+
+		let buttons: ActionButton[] = [];
+		try {
+			buttons = JSON.parse(rawButtons);
+		} catch {
+			// If the JSON in the attribute is invalid, we simply render no buttons.
+			buttons = [];
+		}
 
 		const buttonsWithTranslations = buttons.map((button: ActionButton) => {
 			return {
