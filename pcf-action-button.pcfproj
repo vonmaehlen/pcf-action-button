@@ -11,6 +11,7 @@
     <Name>pcf-action-button</Name>
     <ProjectGuid>13ef254c-4a15-4c0d-9837-f34871a0bd44</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
+    <PcfBuildMode>production</PcfBuildMode>
   </PropertyGroup>
 
   <PropertyGroup>

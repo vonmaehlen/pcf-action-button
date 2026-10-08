@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="novalogica" constructor="QuickActionButton" version="2.1.0" display-name-key="QuickActionButton" description-key="With one field you can have multiple quick action buttons" control-type="standard" preview-image="imgs/novalogica.svg">
+  <control namespace="novalogica" constructor="QuickActionButton" version="2.1.1" display-name-key="QuickActionButton" description-key="With one field you can have multiple quick action buttons" control-type="standard" preview-image="imgs/novalogica.svg">
     <property name="LinkedAttribute" display-name-key="Linked Attribute" description-key="" of-type-group="ValidTypes" usage="bound" required="true" />
     <!-- Buttons configuration comes from a bound attribute (e.g., SingleLine.Text) -->
     <property name="Buttons" display-name-key="Buttons JSON" description-key="" of-type-group="ValidTypes" usage="bound" required="true" />
